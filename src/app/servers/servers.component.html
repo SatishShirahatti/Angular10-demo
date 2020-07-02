@@ -1,0 +1,17 @@
+<p>servers works!</p>
+<!-- <label>Server Name</label>
+<input type="text" class="form-control" (input)="onUpdateServerName($event)"/> -->
+<label>Server Name</label>
+<input type="text" class="form-control" [(ngModel)]="serverName" />
+<p>{{serverName}}</p>
+
+	<hr>
+<label>User Name</label>
+<input type="text" class="form-control" [(ngModel)]="userName" />
+<button class="btn btn-primary" [disabled]="userName === ''" (click)="this.userName = ''">Reset Username</button>
+<p>{{userName}}</p>
+<button class="btn btn-primary" [disabled]='!allowNewServer'
+(click)="onserverCreation()" >add server</button>
+<p>{{serverCreation}}</p>
+<p [innerText]="allowNewServer"></p>
+<app-server></app-server>
