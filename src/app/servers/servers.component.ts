@@ -10,6 +10,8 @@ export class ServersComponent implements OnInit {
 allowNewServer = false;
 serverCreation = "server is not created";
 serverName = "test Server";
+serverCreated = false;
+servers = ['server1', 'server2']
 
 userName = "";
   constructor() { 
@@ -21,6 +23,8 @@ userName = "";
   ngOnInit(): void {
   }
 onserverCreation (){
+this.serverCreated = true;
+this.servers.push(this.serverName);
  this.serverCreation = "server is created " +  this.serverName;
 }
 onUpdateServerName(event:Event){

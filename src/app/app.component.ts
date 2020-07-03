@@ -13,4 +13,13 @@ import { Component } from '@angular/core';
 	
 export class AppComponent {
   title = 'my-dream-app';
+	showSecret= false;
+	log =[];
+
+	ToggleDetials(){
+
+	this.showSecret = !this.showSecret;
+	this.log.push(new Date())
+
+	}
 }
